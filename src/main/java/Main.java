@@ -45,7 +45,7 @@ class CsvBookSource implements BookSource {
     }
 }
 
-public class One {
+public class Main {
 
     public static void main(String[] args) {
         BookSource source = new InMemoryBookSource();
