@@ -1,18 +1,10 @@
 import java.util.List;
 
-class Book {
-    private final String title;
-    private final String author;
+record Book(String title, String author) {
 
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return title + " - " + author;
-    }
+        public boolean isWrittenBy(String author) {
+            return this.author.equals(author);
+        }
 }
 
 interface BookSource {
